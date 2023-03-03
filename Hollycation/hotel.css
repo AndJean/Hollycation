@@ -1,0 +1,239 @@
+*{
+    padding:0;
+    margin:0;
+}
+.nav
+{
+  width: 100%;
+  height:10vh;
+  margin: 1rem auto;
+  padding:1rem;
+  position: absolute;
+  
+}
+nav ul
+{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+    
+}
+nav li:hover
+{
+  background-color: green;
+}
+nav a
+{
+  text-decoration:none;
+  font-size: 1rem;
+  font-weight:400;
+  color: #fff;
+  display: block;
+  padding:0.5rem 1rem;
+  
+}
+nav a:focus
+{
+  background-color: transparent;
+  color:black;
+}
+.active
+{
+  background-color: orangered;
+}
+.logo
+{
+    flex-basis: 500px;
+    text-align:center;
+    
+}
+.logo:hover
+{
+    background-color: transparent;
+    background-image: none;
+}
+.header
+{
+    width:100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("ifree/images5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.header img
+{
+    width: 150px;
+}
+.hotel h1
+{
+    text-align:center;
+    margin-top:10px;
+}
+.hotel-recommanded 
+{
+    margin-left: 100px;
+    margin-top:25px;
+}
+.booking{
+   
+    width: 70%;
+    margin:auto;
+    height: 100px;
+    margin-bottom: 5%;
+    background-color:olivedrab;
+    background-image: linear-gradient(to right bottom, #6bd16f, #53deaf, #6ae7df, #a0ecf9, #d6f1ff, #e0eeff, #efe9ff, #fee5fa, #ffcee4, #ffb8bc, #ffa98a, #f3a453);
+    border-style: solid;
+    border-width: 5px;
+    border-color: orange;
+    border-bottom-color: green;
+    border-right-color: green;
+    overflow-x: hidden;
+}
+
+.booking .form-line{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.booking h4
+{
+    font:2em sans-serif;
+    margin:5px;
+}
+.card-container
+{
+    display: flex;
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    flex-direction: column;
+    margin-left: 300px;
+    
+   
+}
+.card-1:hover  
+{
+    transform: translateY(5px);
+    -webkit-box-shadow: 0 10px 10px 0 rgba(230, 122, 22, 0.829);
+    box-shadow: 5 10px 20px 0px ;
+}
+.card-1
+{
+    display: flex;
+    background-color: rgb(241, 241, 241);
+    box-shadow:  0 10px 20px 0 rgba(97, 76, 20, 0.842);
+    width: 900px;
+    margin-bottom: 25px;
+}
+   
+.card-img-1
+{
+    width: 40%;
+    height:200px;
+    
+    
+}
+.card-img-1 img 
+{
+    width:100%;
+    height:100%;
+    background-image: cover;
+    image-rendering:crisp-edges;
+   
+}
+.card-text-1
+{
+    margin-top: 5px;
+    width: 20%;
+    padding: 5px;
+}
+.card-text-2
+{
+    color:rgb(255, 0, 0);
+    margin-top: 10px;
+    width: 20%;
+}
+.card-text-3
+{
+    width: 20%;
+    margin-top: 5px;
+}
+.animated-border-button {
+    background-color: green;
+    background-image: linear-gradient(to right bottom, #6bd16f, #53deaf, #6ae7df, #a0ecf9, #d6f1ff, #e0eeff, #efe9ff, #fee5fa, #ffcee4, #ffb8bc, #ffa98a, #f3a453);
+    border: none;
+    color: black;
+    outline: none;
+    padding: 10px 10px 10px;
+    position: relative;
+    margin-top: 15px;
+  }
+  
+  .animated-border-button:before,
+  .animated-border-button:after {
+    border: 0 solid transparent;
+    transition: all 0.3s;
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 24px;
+  }
+  
+  .animated-border-button:before {
+    border-top: 2px solid #be5f12;
+    right: 0;
+    top: -4px;
+}
+  
+  .animated-border-button:after {
+    border-bottom: 2px solid #43be12;
+    bottom: -4px;
+    left: 0;
+}
+  
+  .animated-border-button:hover:before,
+  .animated-border-button:hover:after 
+{
+    width: 100%;
+}
+.pagination 
+{
+    display: flex;
+    padding: 0;
+    margin-left: 50%;
+}
+  
+.pagination a 
+{
+    color: black;
+    float: left;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+  
+.pagination a.active
+{
+    background-color: orange;
+    color: white;
+}
+  
+.pagination a:hover:not(.active) 
+{
+    background-image: linear-gradient(to right bottom, #6bd16f, #53deaf, #6ae7df, #a0ecf9, #d6f1ff, #e0eeff, #efe9ff, #fee5fa, #ffcee4, #ffb8bc, #ffa98a, #f3a453);
+
+}
+.footer
+{
+    height: 50px;
+    padding-left: 50%;
+    margin-top:50px;
+    background-image: linear-gradient(to right bottom, #6bd16f, #53deaf, #6ae7df, #a0ecf9, #d6f1ff, #e0eeff, #efe9ff, #fee5fa, #ffcee4, #ffb8bc, #ffa98a, #f3a453);
+
+}
+

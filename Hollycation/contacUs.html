@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="contactUs.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <ul>
+                 <li><a href="index.html" class="active">Home</a></li>
+                 <li><a href="hotel.html">Hotel</a></li>
+                 <li><a href="activities.html">Activities</a></li>
+                 <li class="logo"><a href="index.html"><img src="logo.png" alt="hollycation"></a></li>
+                 <li><a href="aboutUs.html">About Us</a></li>
+                 <li><a href="contacUs.html">Contact Us</a></li>
+                 <li><a href="register.html"><i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Register</a></li>
+            </ul> 
+      </nav>
+      <div class="main-contact">
+          <div class="contact">
+              <h1>Contact Us</h1>
+              <form name="contact" method="post" onsubmit=" return ClickMessage()" style="margin-left:5%;">
+
+                <label style="margin-left:2%;">First Name :</label><br>
+                <input type="text" name="Fname" id="fname" placeholder="Enter your First name"><br><br>
+
+                <label style="margin-left:2%;">Surname :</label><br>
+                <input type="text" name="Sname" id="sname" placeholder="Enter your Surname"><br><br>
+
+                <label style="margin-left:2%;">Email :</label><br>
+                <input type="text" name="Email" id="email" placeholder="Enter your email" required><br><br>
+
+                <label for="hear">How did you hear about us:</label>
+                    <select name="hear" id="hear">
+                        <option value="search engine">Search engine</option>
+                        <option value="television">Television</option>
+                        <option value="social media">Social media</option>
+                        <option value="friends">Friends</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+
+                <label for="review">Your message:</label>
+                    <textarea id="review" name="review" rows="4" cols="50" spellcheck="false" style="width: 500px;">
+                     Leave a Message
+                </textarea><br><br>
+
+                <input type="submit" value="Submit" name="submit" id="submit">
+              </form>
+          </div>
+      </div>
+    </section>
+    <script >
+        function ClickMessage(){
+         alert("You have successfully sent a message. We will keep you in touch.");
+        }
+        </script>
+       
+</body>
+</html>

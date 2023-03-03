@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="hotel.css" > 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+</head>
+<body>
+   <section class="header">
+       <div class="main-header">
+            <nav>
+            <ul class="nav">
+                 <li><a href="index.html" class="active">Home</a></li>
+                 <li><a href="hotel.html">Hotel</a></li>
+                 <li><a href="activities.html">Activities</a></li>
+                 <li class="logo"><a href="index.html"><img src="logo.png" alt="hollycation"></a></li>
+                 <li><a href="aboutUs.html">About</a></li>
+                 <li><a href="contacUs.html">Contact</a></li>
+                 <li><a href="register.html"><i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Register</a></li>
+            </ul> 
+            </nav>
+       </div>
+    </section> 
+
+<section class="hotel">
+    <!--heading-->
+    <div class="hotel-heading">
+        <h1>Our hotels</h1>
+    </div>
+    <div class="hotel-recommanded">
+        <h3>Recommanded places in Abidjan : 57 properties found</h3><br>
+    </div>
+ 
+   <div class="booking">
+    <div class="booking-form" id="bookingFormHollycation">
+        <form>
+          <h4>Make A Reservation </h4>
+          <ul class="form-line">
+            <li>
+                <div class="pseudo-select" id="selectDepartureDateDiv">
+                    <span>Departure</span>
+                        <input type="date">
+                </div>
+            </li>
+            <li>
+                <div class="pseudo-select" id="selectReturnDateDiv">
+                    <span>Return</span>
+                        <input type="date">
+                </div>
+            </li>    
+            <li>
+                <div class="pseudo-select" id="selectRoomsDiv">
+                    <span>Rooms</span>
+                    <select id="selectRooms">
+                        <option>Rooms</option>
+                        <option value="1">1 Room</option>
+                        <option value="2">2 Rooms</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="pseudo-select" id="selectAdultsDiv">
+                    <span>Adults</span>
+                    <select id="selectAdults">
+                        <option>Adults</option>
+                        <option value="1">1 Adult</option>
+                        <option value="2">2 Adults</option>
+                        <option value="3">3 Adults</option>
+                        <option value="4">4 Adults</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="pseudo-select" id="selectChildrenDiv"><span>Children</span>
+                    <select id="selectChildren">
+                        <option>Children</option>
+                        <option value="1">1 Child</option>
+                        <option value="2">2 Children</option>
+                        <option value="3">3 Children</option>
+                        <option value="4">4 Children</option>
+                        <option value="5">5 Children</option>
+                        <option value="6">6 Children</option>
+                    </select>
+                </div>
+            </li>
+              
+              </ul>
+          
+          
+        </form>
+      </div>
+   </div>
+  
+  <!--aside div filter--> 
+<div style="height:700px;width:200px;float:left; border: 1px solid; margin-left: 15px;" ><!-- The Div containing the website content -->
+   <!--form filter heading-->     
+    <h4> &nbsp;Select Filter : </h4><hr><br>
+   <!--form filter home start-->     
+            <form action="selectFilter">
+                &nbsp;<input type="checkbox" id="filter1" name="filter1" value="Price">
+                <label for="filter1"> Price</label><br>
+                &nbsp;<input type="checkbox" id="filter2" name="filter2" value="Room">
+                <label for="filter2"> Room</label><br>
+                &nbsp;<input type="checkbox" id="filter3" name="filter3" value="Star">
+                <label for="filter3"> Star rating</label><br>
+                &nbsp;<input type="checkbox" id="filter4" name="filter4" value="Breakfast">
+                <label for="filter4"> Breakfast Included</label><br>
+                &nbsp;<input type="checkbox" id="filter5" name="filter5" value="cancellation">
+                <label for="filter5"> Free cancellation</label><br><br><hr>
+            </form>
+    <!--form filter home end--> 
+    <!--form filter heading-->          
+              
+    <h4>  &nbsp;Star rating </h4><br>
+    <!--form filter rating start-->
+            <form action="selectFilterStar">
+                &nbsp;<input type="checkbox" id="filter6" name="filter1" value="2 stars">
+                <label for="filter6"> 2 stars</label><br>
+                &nbsp;<input type="checkbox" id="filter7" name="filter7" value="3 stars">
+                <label for="filter7"> 3 stars</label><br>
+                &nbsp;<input type="checkbox" id="filter8" name="filter8" value="4 stars">
+                <label for="filter3"> 4 stars</label><br>
+                &nbsp;<input type="checkbox" id="filter9" name="filter9" value="5 stars">
+                <label for="filter4"> 5 stars</label><br>
+                &nbsp;<input type="checkbox" id="filter10" name="filter10" value="Unrated">
+                <label for="filter5">Unrated</label><br><br><hr>
+            </form>
+    <!--form filter rating end-->          
+     <!--form filter heading-->           
+    <h4>&nbsp;Distance from center of Abidjan </h4><br>
+    <!--form filter distance start--> 
+            <form action="selectFilterDistance">
+                &nbsp;<input type="checkbox" id="filter11" name="filter1" value="distance">
+                <label for="filter1"> Less than 1/2 mile</label><br>
+                &nbsp;<input type="checkbox" id="filter12" name="filter2" value="distance">
+                <label for="filter2"> Less than 1 mile</label><br>
+                &nbsp;<input type="checkbox" id="filter13" name="filter3" value="distance">
+                <label for="filter3"> Less than 2 mile</label><br>
+                <br><hr>
+            </form>
+    <!--form filter distance end--> 
+
+    <!--form filter heading-->         
+    <h4>  &nbsp;Fun things to do </h4><br>
+    <!--form filter fun thingd to do start--> 
+            <form action="selectFilterActivity">
+                &nbsp;<input type="checkbox" id="filter14" name="filter14" value="Massage">
+                <label for="filter14"> Massage</label><br>
+                &nbsp;<input type="checkbox" id="filter15" name="filter15" value="Live sport events (broadcast)">
+                <label for="filter15"> Live sport events</label><br>
+                &nbsp;<input type="checkbox" id="filter16" name="filter16" value="Evening entertainment">
+                <label for="filter16"> Evening entertainment</label><br>
+                &nbsp;<input type="checkbox" id="filter17" name="filter17" value="Indoor pool">
+                <label for="filter17"> Indoor pool</label><br>
+                &nbsp;<input type="checkbox" id="filter18" name="filter18" value="Temporary art galleries">
+                <label for="filter18"> Temporary art galleries</label><br><br><hr>
+            </form>
+    <!--form filter fun thingd to do end-->
+    <!--form filter heading-->       
+    <h4> &nbsp; Cancellation policy </h4><br>
+            <form action="selectFilterFood">
+                &nbsp;<input type="checkbox" id="filter19" name="filter19" value="Self catering">
+                <label for="filter19"> Self catering</label><br>
+                &nbsp;<input type="checkbox" id="filter20" name="filter20" value="Breakfast included">
+                <label for="filter20"> Breakfast included</label><br>
+                &nbsp;<input type="checkbox" id="filter21" name="filter21" value="Breakfast & lunch included">
+                <label for="filter21"> Breakfast & lunch included</label><br>
+                &nbsp;<input type="checkbox" id="filter22" name="filter22" value="Breakfast & dinner included">
+                <label for="filter22"> Breakfast & dinner included</label><br>
+            </form>
+    </div>
+<!--horizontal card-->
+    <div class="card-container">
+<!--Card 1-->
+        <div class="card-1">
+<!--div img start-->
+            <div class="card-img-1">
+                <img src="ifree/himages1.jpg" alt="hotel1">
+            </div>
+<!--div text start-->
+            <div class="card-text-1">
+                <h4>Private Villa</h4><br>
+                <h4>Sea view</h4><br>
+                <p>Breakfast included</p><br>
+                <h5>Free cancellation</h5>
+                <h5>wifi</h5>
+            </div>
+<!--div rating start-->
+            <div class="card-text-2">
+                 <!--icon link with boostrap start-->
+                 <i class="bi bi-star-fill"></i>
+                 <i class="bi bi-star-fill"></i>
+                 <i class="bi bi-star-fill"></i>
+                 <i class="bi bi-star-fill"></i>
+                 <i class="bi bi-star-half"></i>
+                 <!--icon link with boostrap start--> 
+            </div>
+            <p>2405 ratings</p>
+<!--div text start-->
+            <div class="card-text-3">
+                <p>1 night, 2 adults</p><br>
+                <p id="booking"><strong>£109*</strong></p>
+                <h6>* price may vary depending on selected date.</h6><br>
+                <p>Includes taxes and charges</p>
+                <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+            </div>
+        </div>
+<!--Card 1 End-->
+<!--Card 2 start-->
+<div class="card-1">
+    <!--div img start-->
+    <div class="card-img-1">
+        <img src="ifree/himages2.jpg" alt="hotel1">
+    </div>
+    <!--div text start-->
+    <div class="card-text-1">
+        <h4>Private Villa</h4><br>
+        <h4>Sea view</h4><br>
+        <p>Breakfast included</p><br>
+        <h5>Free cancellation</h5>
+        <h5>wifi</h5>
+    </div>
+    <!--div rating start-->
+    <div class="card-text-2">
+         <!--icon link with boostrap start-->
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-half"></i>
+         <!--icon link with boostrap start-->
+        
+    </div>
+    <p>2405 ratings</p>
+    <!--div text start-->
+    <div class="card-text-3">
+        <p>1 night, 2 adults</p><br>
+        <p id="booking1"><strong>£109*</strong></p>
+        <h6>* price may vary depending on selected date.</h6><br>
+        <p>Includes taxes and charges</p>
+        <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+    </div>
+</div>
+<!--Card 2 End-->
+<div class="card-1">
+    <div class="card-img-1">
+        <img src="ifree/himages3.jpg" alt="hotel1">
+    </div>
+    <div class="card-text-1">
+        <h4>Private Villa</h4><br>
+        <h4>Sea view</h4><br>
+        <p>Breakfast included</p><br>
+        <h5>Free cancellation</h5>
+        <h5>wifi</h5>
+    </div>
+    <div class="card-text-2">
+         <!--icon link with boostrap start-->
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-half"></i>
+         <!--icon link with boostrap start-->
+        
+    </div>
+    <p>2405 ratings</p>
+    <div class="card-text-3">
+        <p>1 night, 2 adults</p><br>
+        <p id="booking2"><strong>£109*</strong></p>
+        <h6>* price may vary depending on selected date.</h6><br>
+        <p>Includes taxes and charges</p>
+        <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+    </div>
+</div>
+
+
+<div class="card-1">
+    <div class="card-img-1">
+        <img src="ifree/himages4.jpg" alt="hotel1">
+    </div>
+    <div class="card-text-1">
+        <h4>Private Villa</h4><br>
+        <h4>Sea view</h4><br>
+        <p>Breakfast included</p><br>
+        <h5>Free cancellation</h5>
+        <h5>wifi</h5>
+    </div>
+    <div class="card-text-2">
+         <!--icon link with boostrap start-->
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-half"></i>
+         <!--icon link with boostrap start-->
+        
+    </div>
+    <p>2405 ratings</p>
+    <div class="card-text-3">
+        <p>1 night, 2 adults</p><br>
+        <p id="booking3"><strong>£109*</strong></p>
+        <p>Includes taxes and charges</p>
+        <h6>* price may vary depending on selected date.</h6><br>
+        <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+    </div>
+</div>
+
+
+<div class="card-1">
+    <div class="card-img-1">
+        <img src="ifree/himages6.jpg" alt="hotel1">
+    </div>
+    <div class="card-text-1">
+        <h4>Private Villa</h4><br>
+        <h4>Sea view</h4><br>
+        <p>Breakfast included</p><br>
+        <h5>Free cancellation</h5>
+        <h5>wifi</h5>
+    </div>
+    <div class="card-text-2">
+         <!--icon link with boostrap start-->
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-half"></i>
+         <!--icon link with boostrap start-->
+        
+    </div>
+    <p>2405 ratings</p>
+    <div class="card-text-3">
+        <p>1 night, 2 adults</p><br>
+        <p id="booking4"><strong>£109*</strong></p>
+        <h6>* price may vary depending on selected date.</h6><br>
+        <p>Includes taxes and charges</p>
+        <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+    </div>
+</div>
+
+
+<div class="card-1">
+    <div class="card-img-1">
+        <img src="ifree/images2.jpg" alt="hotel1">
+    </div>
+    <div class="card-text-1">
+        <h4>Private Villa</h4><br>
+        <h4>Sea view</h4><br>
+        <p>Breakfast included</p><br>
+        <h5>Free cancellation</h5>
+        <h5>wifi</h5>
+    </div>
+    <div class="card-text-2">
+         <!--icon link with boostrap start-->
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-half"></i>
+         <!--icon link with boostrap start-->
+        
+    </div>
+    <p>2405 ratings</p>
+    <div class="card-text-3">
+        <p>1 night, 2 adults</p><br>
+        <p><strong>£109*</strong></p>
+        <h6>* price may vary depending on selected date.</h6><br>
+        <p>Includes taxes and charges</p>
+        <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+    </div>
+</div>
+
+
+<div class="card-1">
+    <div class="card-img-1">
+        <img src="ifree/images9.jpg" alt="hotel1">
+    </div>
+    <div class="card-text-1">
+        <h4>Private Villa</h4><br>
+        <h4>Sea view</h4><br>
+        <p>Breakfast included</p><br>
+        <h5>Free cancellation</h5>
+        <h5>wifi</h5>
+    </div>
+    <div class="card-text-2">
+         <!--icon link with boostrap start-->
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-half"></i>
+         <!--icon link with boostrap start-->
+        
+    </div>
+    <p>2405 ratings</p>
+    <div class="card-text-3">
+        <p>1 night, 2 adults</p><br>
+        <p id="booking5"><strong>£109*</strong></p>
+        <h6>* price may vary depending on selected date.</h6><br>
+        <p>Includes taxes and charges</p>
+        <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+    </div>
+</div>
+
+
+<div class="card-1">
+    <div class="card-img-1">
+        <img src="ifree/images5.jpg" alt="hotel1">
+    </div>
+    <div class="card-text-1">
+        <h4>Private Villa</h4><br>
+        <h4>Sea view</h4><br>
+        <p>Breakfast included</p><br>
+        <h5>Free cancellation</h5>
+        <h5>wifi</h5>
+    </div>
+    <div class="card-text-2">
+         <!--icon link with boostrap start-->
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-half"></i>
+         <!--icon link with boostrap start-->
+        
+    </div>
+    <p>2405 ratings</p>
+    <div class="card-text-3">
+        <p>1 night, 2 adults</p><br>
+        <p id="booking6"><strong>£109*</strong></p>
+        <h6>* price may vary depending on selected date.</h6><br>
+        <p>Includes taxes and charges</p>
+        <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+    </div>
+</div>
+
+
+<div class="card-1">
+    <div class="card-img-1">
+        <img src="ifree/features2.jpg" alt="hotel1">
+    </div>
+    <div class="card-text-1">
+        <h4>Private Villa</h4><br>
+        <h4>Sea view</h4><br>
+        <p>Breakfast included</p><br>
+        <h5>Free cancellation</h5>
+        <h5>wifi</h5>
+    </div>
+    <div class="card-text-2">
+         <!--icon link with boostrap start-->
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-half"></i>
+         <!--icon link with boostrap start-->
+        
+    </div>
+    <p>2405 ratings</p>
+    <div class="card-text-3">
+        <p>1 night, 2 adults</p><br>
+        <p id="booking7"><strong>£109*</strong></p>
+        <h6>* price may vary depending on selected date.</h6><br>
+        <p>Includes taxes and charges</p>
+        <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+    </div>
+</div>
+
+
+<div class="card-1">
+    <div class="card-img-1">
+        <img src="ifree/himages3.jpg" alt="hotel1">
+    </div>
+    <div class="card-text-1">
+        <h4>Private Villa</h4><br>
+        <h4>Sea view</h4><br>
+        <p>Breakfast included</p><br>
+        <h5>Free cancellation</h5>
+        <h5>wifi</h5>
+    </div>
+    <div class="card-text-2">
+         <!--icon link with boostrap start-->
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-fill"></i>
+         <i class="bi bi-star-half"></i>
+         <!--icon link with boostrap start-->
+        
+    </div>
+    <p>2405 ratings</p>
+    <div class="card-text-3">
+        <p>1 night, 2 adults</p><br>
+        <p id="booking9"><strong>£109*</strong></p>
+        <h6>* price may vary depending on selected date.</h6><br>
+        <p>Includes taxes and charges</p>
+        <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+    </div>
+</div>
+<!--Card 1-->
+<div class="card-1">
+    <!--div img start-->
+                <div class="card-img-1">
+                    <img src="ifree/himages1.jpg" alt="hotel1">
+                </div>
+    <!--div text start-->
+    <div class="card-text-1">
+        <h4>Private Villa</h4><br>
+        <h4>Sea view</h4><br>
+        <p>Breakfast included</p><br>
+        <h5>Free cancellation</h5>
+        <h5>wifi</h5>
+    </div>
+    <!--div rating start-->
+                <div class="card-text-2">
+                     <!--icon link with boostrap start-->
+                     <i class="bi bi-star-fill"></i>
+                     <i class="bi bi-star-fill"></i>
+                     <i class="bi bi-star-fill"></i>
+                     <i class="bi bi-star-fill"></i>
+                     <i class="bi bi-star-half"></i>
+                     <!--icon link with boostrap start--> 
+                </div>
+                <p>2405 ratings</p>
+    <!--div text start-->
+                <div class="card-text-3">
+                    <p>1 night, 2 adults</p><br>
+                    <p id="booking10"><strong>£109*</strong></p>
+                    <h6>* price may vary depending on selected date.</h6><br>
+                    <p>Includes taxes and charges</p>
+                    <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+                </div>
+            </div>
+    <!--Card 1 End-->
+    <!--Card 2 start-->
+    <div class="card-1">
+        <div class="card-img-1">
+            <img src="ifree/himages2.jpg" alt="hotel1">
+        </div>
+        <div class="card-text-1">
+            <h4>Private Villa</h4><br>
+            <h4>Sea view</h4><br>
+            <p>Breakfast included</p><br>
+            <h5>Free cancellation</h5>
+            <h5>wifi</h5>
+        </div>
+        <div class="card-text-2">
+             <!--icon link with boostrap start-->
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             <!--icon link with boostrap start-->
+            
+        </div>
+        <p>2405 ratings</p>
+        <div class="card-text-3">
+            <p>1 night, 2 adults</p><br>
+            <p id="booking11"><strong>£109*</strong></p>
+            <h6>* price may vary depending on selected date.</h6><br>
+            <p>Includes taxes and charges</p>
+            <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+        </div>
+    </div>
+    <!--Card 2 End-->
+    <div class="card-1">
+        <div class="card-img-1">
+            <img src="ifree/himages3.jpg" alt="hotel1">
+        </div>
+        <div class="card-text-1">
+            <h4>Private Villa</h4><br>
+            <h4>Sea view</h4><br>
+            <p>Breakfast included</p><br>
+            <h5>Free cancellation</h5>
+            <h5>wifi</h5>
+        </div>
+        <div class="card-text-2">
+             <!--icon link with boostrap start-->
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             <!--icon link with boostrap start-->
+            
+        </div>
+        <p>2405 ratings</p>
+        <div class="card-text-3">
+            <p>1 night, 2 adults</p><br>
+            <p id="booking12"><strong>£109*</strong></p>
+            <h6>* price may vary depending on selected date.</h6><br>
+            <p>Includes taxes and charges</p>
+            <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+        </div>
+    </div>
+    
+    
+    <div class="card-1">
+        <div class="card-img-1">
+            <img src="ifree/himages4.jpg" alt="hotel1">
+        </div>
+        <div class="card-text-1">
+            <h4>Private Villa</h4><br>
+            <h4>Sea view</h4><br>
+            <p>Breakfast included</p><br>
+            <h5>Free cancellation</h5>
+            <h5>wifi</h5>
+        </div>
+        <div class="card-text-2">
+             <!--icon link with boostrap start-->
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             <!--icon link with boostrap start-->
+            
+        </div>
+        <p>2405 ratings</p>
+        <div class="card-text-3">
+            <p>1 night, 2 adults</p><br>
+            <p id="booking13"><strong>£109*</strong></p>
+            <h6>* price may vary depending on selected date.</h6><br>
+            <p>Includes taxes and charges</p>
+            <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+        </div>
+    </div>
+    
+    
+    <div class="card-1">
+        <div class="card-img-1">
+            <img src="ifree/himages6.jpg" alt="hotel1">
+        </div>
+        <div class="card-text-1">
+            <h4>Private Villa</h4><br>
+            <h4>Sea view</h4><br>
+            <p>Breakfast included</p><br>
+            <h5>Free cancellation</h5>
+            <h5>wifi</h5>
+        </div>
+        <div class="card-text-2">
+             <!--icon link with boostrap start-->
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             <!--icon link with boostrap start-->
+            
+        </div>
+        <p>2405 ratings</p>
+        <div class="card-text-3">
+            <p>1 night, 2 adults</p><br>
+            <p id="booking14"><strong>£109*</strong></p>
+            <h6>* price may vary depending on selected date.</h6><br>
+            <p>Includes taxes and charges</p>
+            <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+        </div>
+    </div>
+    
+    
+    <div class="card-1">
+        <div class="card-img-1">
+            <img src="ifree/images2.jpg" alt="hotel1">
+        </div>
+        <div class="card-text-1">
+            <h4>Private Villa</h4><br>
+            <h4>Sea view</h4><br>
+            <p>Breakfast included</p><br>
+            <h5>Free cancellation</h5>
+            <h5>wifi</h5>
+        </div>
+        <div class="card-text-2">
+             <!--icon link with boostrap start-->
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             <!--icon link with boostrap start-->
+            
+        </div>
+        <p>2405 ratings</p>
+        <div class="card-text-3">
+            <p>1 night, 2 adults</p><br>
+            <p id="booking15"><strong>£109*</strong></p>
+            <h6>* price may vary depending on selected date.</h6><br>
+            <p>Includes taxes and charges</p>
+            <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+        </div>
+    </div>
+    
+    
+    <div class="card-1">
+        <div class="card-img-1">
+            <img src="ifree/images9.jpg" alt="hotel1">
+        </div>
+        <div class="card-text-1">
+            <h4>Private Villa</h4><br>
+            <h4>Sea view</h4><br>
+            <p>Breakfast included</p><br>
+            <h5>Free cancellation</h5>
+            <h5>wifi</h5>
+        </div>
+        <div class="card-text-2">
+             <!--icon link with boostrap start-->
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             <!--icon link with boostrap start-->
+            
+        </div>
+        <p>2405 ratings</p>
+        <div class="card-text-3">
+            <p>1 night, 2 adults</p><br>
+            <p id="booking16"><strong>£109*</strong></p>
+            <h6>* price may vary depending on selected date.</h6><br>
+            <p>Includes taxes and charges</p>
+            <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+        </div>
+    </div>
+    
+    
+    <div class="card-1">
+        <div class="card-img-1">
+            <img src="ifree/images5.jpg" alt="hotel1">
+        </div>
+        <div class="card-text-1">
+            <h4>Private Villa</h4><br>
+            <h4>Sea view</h4><br>
+            <p>Breakfast included</p><br>
+            <h5>Free cancellation</h5>
+            <h5>wifi</h5>
+        </div>
+        <div class="card-text-2">
+             <!--icon link with boostrap start-->
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             <!--icon link with boostrap start-->
+            
+        </div>
+        <p>2405 ratings</p>
+        <div class="card-text-3">
+            <p>1 night, 2 adults</p><br>
+            <p id="booking17"><strong>£109*</strong></p>
+            <h6>* price may vary depending on selected date.</h6><br>
+            <p>Includes taxes and charges</p>
+            <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+        </div>
+    </div>
+    
+    
+    <div class="card-1">
+        <div class="card-img-1">
+            <img src="ifree/features2.jpg" alt="hotel1">
+        </div>
+        <div class="card-text-1">
+            <h4>Private Villa</h4><br>
+            <h4>Sea view</h4><br>
+            <p>Breakfast included</p><br>
+            <h5>Free cancellation</h5>
+            <h5>wifi</h5>
+        </div>
+        <div class="card-text-2">
+             <!--icon link with boostrap start-->
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             <!--icon link with boostrap start-->
+            
+        </div>
+        <p>2405 ratings</p>
+        <div class="card-text-3">
+            <p>1 night, 2 adults</p><br>
+            <p id="booking18"><strong>£109*</strong></p>
+            <h6>* price may vary depending on selected date.</h6><br>
+            <p>Includes taxes and charges</p>
+            <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+        </div>
+    </div>
+    
+    
+    <div class="card-1">
+        <div class="card-img-1">
+            <img src="ifree/himages3.jpg" alt="hotel1">
+        </div>
+        <div class="card-text-1">
+            <h4>Private Villa</h4><br>
+            <h4>Sea view</h4><br>
+            <p>Breakfast included</p><br>
+            <h5>Free cancellation</h5>
+            <h5>wifi</h5>
+        </div>
+        <div class="card-text-2">
+             <!--icon link with boostrap start-->
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-fill"></i>
+             <i class="bi bi-star-half"></i>
+             <!--icon link with boostrap start-->
+            
+        </div>
+        <p>2405 ratings</p>
+        <div class="card-text-3">
+            <p>1 night, 2 adults</p><br>
+            <p id="booking19"><strong>£109*</strong></p>
+            <h6>* price may vary depending on selected date.</h6><br>
+            <p>Includes taxes and charges</p>
+            <a href="#"><button class="animated-border-button" onclick="alert('You have successfully made your reservation, with Hollycation.\n We looking forward to see you.\n Have a lovely day')">I'll Reserve</button></a>
+        </div>
+    </div>
+    
+
+    </div>
+   
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&raquo;</a>
+    </div>
+
+        
+    </section>
+    
+    <section class="footer">
+        <p class="coypright"></p>
+        <h5>&#169;Hollycation</h5>
+    </section>
+    
+</body>
+</html>

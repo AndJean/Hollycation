@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"> 
+<head>
+	<link rel="stylesheet" type="text/css" href="register.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>Register</title>
+	
+</head>
+<body>
+	<section class="header">
+        <div class="main-header">
+        <nav>
+            <ul>
+                 <li><a href="index.html" class="active">Home</a></li>
+                 <li><a href="hotel.html">Hotel</a></li>
+                 <li><a href="activities.html">Activities</a></li>
+                 <li class="logo"><a href="index.html"><img src="logo.png" alt="hollycation"></a></li>
+                 <li><a href="aboutUs.html">About</a></li>
+                 <li><a href="contacUs.html">Contact</a></li>
+                 <li><a href="register.html"><i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Register</a></li>
+            </ul> 
+      </nav>
+        </div>
+      <div class="main-registration">
+          <div class="register">
+              <h1>Register now</h1><br>
+<form id="register" onsubmit=" return ClickMessage()">
+	<label>First Name :</label><br>
+                <input type="text" name="Fname" id="fname" placeholder="Enter your First name"><br><br>
+                  
+                <label>Surname :</label><br>
+                <input type="text" name="Sname" id="sname" placeholder="Enter your Surname"><br><br>
+            
+                <label>Date of birth :</label><br>
+                <input type="date" name="Dob" id="dob"><br><br>
+            
+                <label>Email :</label><br>
+                <input type="text" name="Email" id="email" placeholder="Enter your email"><br><br>
+                
+                <label>Confirm email :</label><br>
+                <input type="text" name="Email" id="emailc" placeholder="Enter your email"><br><br>
+
+                <label>Address :</label><br>
+                <input type="text" name="Address" id="address" placeholder="Enter your full Address"><br><br>
+            
+                <label>City :</label><br>
+                <input type="text" name="City" id="city" placeholder="Enter your City"><br><br>
+            
+                <label>Gender :</label><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="Gender" id="male" >
+                &nbsp;
+                <span id="male-1">Male</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="Gender" id="female" >
+                <span id="female-1">Female</span><br><br>
+                
+                <h3>Terms of Service</h3><br>
+                <input type="checkbox" name="agree" id="agree" required>
+                &nbsp;
+                <span id="agree-b"> I agree to the terms of service for this site.</span><br><br>
+                <input type="checkbox" name="adult" id="adult" required>
+                &nbsp;
+                <span id="adult-b"> I am at least 18 years old.</span><br><br><br>
+
+				<input type="submit" value="Submit" name="submit" id="submit">
+</form>
+		  </div>
+	  </div>
+	</section>
+  <script language="JavaScript">
+    function ClickMessage(){
+     alert("You have successfully registered");
+    }
+    </script>
+</body>
+</html>

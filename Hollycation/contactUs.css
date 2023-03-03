@@ -1,0 +1,128 @@
+*{
+    padding:0;
+    margin:0;
+}
+.nav
+{
+  width: 100%;
+  height:10vh;
+  margin: 1rem auto;
+  padding:1rem;
+  position: absolute;
+}
+nav ul
+{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+     
+}
+nav li:hover
+{
+  background-color: green;
+  color: white;
+}
+nav a
+{
+  text-decoration:none;
+  font-size: 1rem;
+  font-weight:400;
+  color:#fff;
+  display: block;
+  padding:0.5rem 1rem;
+}
+nav a:focus
+{
+  background-color: transparent;
+  color:black;
+}
+.active
+{
+  background-color: orangered;
+}
+.logo
+{
+    flex-basis: 600px;
+    text-align:center;
+}
+.logo:hover
+{
+    background-color: transparent;
+    background-image: none;
+}
+.header
+{
+    width: 100%;
+    height: 110vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("ifree/images11.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.header img
+{
+    width: 250px;
+}
+.main-contact
+{
+    width: 450px;
+    margin: 50px ;
+}
+h1
+{
+    text-align: center;
+}
+.contact
+{
+    width: 200%;
+    font-size: 15px;
+    border-radius: 15px;
+    background-color:rgba(0,0,0,0.3);
+    color:#fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 4px 4px 20px;
+    margin-left: 20%;
+}
+.contact:hover
+{
+  transform: translateY(-25px);
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 5 10px 20px 0 rgba(0, 0, 0, 0.35);
+}
+#contact
+{
+    margin: 30px;
+}
+#submit
+{
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color:rgb(223, 113, 62);
+    background-image: linear-gradient(to right bottom, #6bd16f, #53deaf, #6ae7df, #a0ecf9, #d6f1ff, #e0eeff, #efe9ff, #fee5fa, #ffcee4, #ffb8bc, #ffa98a, #f3a453);
+    box-shadow: 4px 4px 20px;
+    margin-bottom: 15px;
+    color: black;
+    
+}
+#submit:hover
+{
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color:rgb(62, 223, 70);
+    background-image: linear-gradient(to right bottom, #e89e33, #ffa075, #ffaeb0, #ffc7df, #ffe1fa, #eae7ff, #d5eeff, #c9f3ff, #7ef2f6, #1aeed1, #00e691, #54d835);
+    box-shadow: 4px 4px 20px;
+    margin-bottom: 15px;
+    color: black;
+    
+}
